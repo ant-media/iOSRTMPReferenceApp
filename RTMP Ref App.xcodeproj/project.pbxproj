@@ -14,6 +14,7 @@
 		789A729B20F2596D00F07060 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 789A729920F2596D00F07060 /* LaunchScreen.storyboard */; };
 		789A72A520F378B400F07060 /* SwiftyUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789A72A420F378B400F07060 /* SwiftyUserDefaults.swift */; };
 		789A72A720F3797100F07060 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789A72A620F3797100F07060 /* Defaults.swift */; };
+		789A72A920F3817700F07060 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789A72A820F3817700F07060 /* Run.swift */; };
 		A8513565809EAA23673B8547 /* Pods_RTMP_Ref_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7201D5B51A5EECA175A815D6 /* Pods_RTMP_Ref_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		789A729C20F2596D00F07060 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		789A72A420F378B400F07060 /* SwiftyUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyUserDefaults.swift; sourceTree = "<group>"; };
 		789A72A620F3797100F07060 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		789A72A820F3817700F07060 /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
 		D6DA9C4CDB4BD7CF3D3ECA81 /* Pods-RTMP Ref App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RTMP Ref App.release.xcconfig"; path = "Pods/Target Support Files/Pods-RTMP Ref App/Pods-RTMP Ref App.release.xcconfig"; sourceTree = "<group>"; };
 		F722D646F77681C4F4ABB553 /* Pods-RTMP Ref App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RTMP Ref App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RTMP Ref App/Pods-RTMP Ref App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +99,7 @@
 			children = (
 				789A72A420F378B400F07060 /* SwiftyUserDefaults.swift */,
 				789A72A620F3797100F07060 /* Defaults.swift */,
+				789A72A820F3817700F07060 /* Run.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				789A729320F2596A00F07060 /* WelcomeViewController.swift in Sources */,
 				789A72A720F3797100F07060 /* Defaults.swift in Sources */,
 				789A729120F2596A00F07060 /* AppDelegate.swift in Sources */,
+				789A72A920F3817700F07060 /* Run.swift in Sources */,
 				789A72A520F378B400F07060 /* SwiftyUserDefaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,7 +376,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "RTMP Ref App/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.antmedia.rtmp.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -387,7 +394,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "RTMP Ref App/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.antmedia.rtmp.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
