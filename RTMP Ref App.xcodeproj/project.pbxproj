@@ -15,6 +15,8 @@
 		789A72A520F378B400F07060 /* SwiftyUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789A72A420F378B400F07060 /* SwiftyUserDefaults.swift */; };
 		789A72A720F3797100F07060 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789A72A620F3797100F07060 /* Defaults.swift */; };
 		789A72A920F3817700F07060 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789A72A820F3817700F07060 /* Run.swift */; };
+		789A72AB20F3843B00F07060 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789A72AA20F3843B00F07060 /* AlertHelper.swift */; };
+		789A72AE20F3847A00F07060 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789A72AD20F3847A00F07060 /* UIApplication.swift */; };
 		A8513565809EAA23673B8547 /* Pods_RTMP_Ref_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7201D5B51A5EECA175A815D6 /* Pods_RTMP_Ref_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +32,8 @@
 		789A72A420F378B400F07060 /* SwiftyUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyUserDefaults.swift; sourceTree = "<group>"; };
 		789A72A620F3797100F07060 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		789A72A820F3817700F07060 /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
+		789A72AA20F3843B00F07060 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
+		789A72AD20F3847A00F07060 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		D6DA9C4CDB4BD7CF3D3ECA81 /* Pods-RTMP Ref App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RTMP Ref App.release.xcconfig"; path = "Pods/Target Support Files/Pods-RTMP Ref App/Pods-RTMP Ref App.release.xcconfig"; sourceTree = "<group>"; };
 		F722D646F77681C4F4ABB553 /* Pods-RTMP Ref App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RTMP Ref App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RTMP Ref App/Pods-RTMP Ref App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +93,7 @@
 		789A72A220F3789200F07060 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				789A72AC20F3846B00F07060 /* Extension */,
 				789A72A320F378A600F07060 /* Helper */,
 			);
 			path = Util;
@@ -100,8 +105,17 @@
 				789A72A420F378B400F07060 /* SwiftyUserDefaults.swift */,
 				789A72A620F3797100F07060 /* Defaults.swift */,
 				789A72A820F3817700F07060 /* Run.swift */,
+				789A72AA20F3843B00F07060 /* AlertHelper.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		789A72AC20F3846B00F07060 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				789A72AD20F3847A00F07060 /* UIApplication.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		B8D4496DD685A41CB75019A2 /* Pods */ = {
@@ -225,6 +239,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				789A72AB20F3843B00F07060 /* AlertHelper.swift in Sources */,
+				789A72AE20F3847A00F07060 /* UIApplication.swift in Sources */,
 				789A729320F2596A00F07060 /* WelcomeViewController.swift in Sources */,
 				789A72A720F3797100F07060 /* Defaults.swift in Sources */,
 				789A729120F2596A00F07060 /* AppDelegate.swift in Sources */,
