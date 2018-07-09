@@ -14,9 +14,11 @@
 		789A729B20F2596D00F07060 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 789A729920F2596D00F07060 /* LaunchScreen.storyboard */; };
 		789A72A520F378B400F07060 /* SwiftyUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789A72A420F378B400F07060 /* SwiftyUserDefaults.swift */; };
 		789A72A720F3797100F07060 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789A72A620F3797100F07060 /* Defaults.swift */; };
+		A8513565809EAA23673B8547 /* Pods_RTMP_Ref_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7201D5B51A5EECA175A815D6 /* Pods_RTMP_Ref_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7201D5B51A5EECA175A815D6 /* Pods_RTMP_Ref_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RTMP_Ref_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		789A728D20F2596A00F07060 /* RTMP Ref App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RTMP Ref App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		789A729020F2596A00F07060 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		789A729220F2596A00F07060 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		789A729C20F2596D00F07060 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		789A72A420F378B400F07060 /* SwiftyUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyUserDefaults.swift; sourceTree = "<group>"; };
 		789A72A620F3797100F07060 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		D6DA9C4CDB4BD7CF3D3ECA81 /* Pods-RTMP Ref App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RTMP Ref App.release.xcconfig"; path = "Pods/Target Support Files/Pods-RTMP Ref App/Pods-RTMP Ref App.release.xcconfig"; sourceTree = "<group>"; };
+		F722D646F77681C4F4ABB553 /* Pods-RTMP Ref App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RTMP Ref App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RTMP Ref App/Pods-RTMP Ref App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8513565809EAA23673B8547 /* Pods_RTMP_Ref_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CCD9C0CA1302966B4292F41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7201D5B51A5EECA175A815D6 /* Pods_RTMP_Ref_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		789A728420F2596A00F07060 = {
 			isa = PBXGroup;
 			children = (
 				789A728F20F2596A00F07060 /* RTMP Ref App */,
 				789A728E20F2596A00F07060 /* Products */,
+				B8D4496DD685A41CB75019A2 /* Pods */,
+				0CCD9C0CA1302966B4292F41 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +101,15 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		B8D4496DD685A41CB75019A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F722D646F77681C4F4ABB553 /* Pods-RTMP Ref App.debug.xcconfig */,
+				D6DA9C4CDB4BD7CF3D3ECA81 /* Pods-RTMP Ref App.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -93,9 +117,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 789A729F20F2596D00F07060 /* Build configuration list for PBXNativeTarget "RTMP Ref App" */;
 			buildPhases = (
+				D0542234B0D3AED51038BF69 /* [CP] Check Pods Manifest.lock */,
 				789A728920F2596A00F07060 /* Sources */,
 				789A728A20F2596A00F07060 /* Frameworks */,
 				789A728B20F2596A00F07060 /* Resources */,
+				59E12638399AA14404150CA6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +177,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		59E12638399AA14404150CA6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RTMP Ref App/Pods-RTMP Ref App-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/LFLiveKit/LFLiveKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LFLiveKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RTMP Ref App/Pods-RTMP Ref App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0542234B0D3AED51038BF69 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RTMP Ref App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		789A728920F2596A00F07060 /* Sources */ = {
@@ -302,14 +367,12 @@
 		};
 		789A72A020F2596D00F07060 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F722D646F77681C4F4ABB553 /* Pods-RTMP Ref App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "RTMP Ref App/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.antmedia.rtmp.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -319,14 +382,12 @@
 		};
 		789A72A120F2596D00F07060 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6DA9C4CDB4BD7CF3D3ECA81 /* Pods-RTMP Ref App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "RTMP Ref App/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.antmedia.rtmp.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
