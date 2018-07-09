@@ -21,11 +21,11 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var connectButton: UIButton!
     @IBOutlet weak var serverButton: UIButton! {
         didSet {
-//            if let server = Defaults[.server] {
-//                if (server.count > 0) {
-//                    self.serverButton.setTitle("Server ip: \(server)", for: .normal)
-//                }
-//            }
+            if let server = Defaults[.server] {
+                if (server.count > 0) {
+                    self.serverButton.setTitle("Server ip: \(server)", for: .normal)
+                }
+            }
         }
     }
 
