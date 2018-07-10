@@ -41,6 +41,7 @@ class WelcomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.session.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -66,10 +67,10 @@ class WelcomeViewController: UIViewController {
         } else {
             print("Ready to go")
             let url = Defaults[.server]!
-            let room = Defaults[.room]!
+            let room = roomField.text!
             
             let stream = LFLiveStreamInfo()
-            stream.url = "rtmp:/\(url)/LiveApp/\(room)"
+            stream.url = "rtmp://\(url)/LiveApp/\(room)"
             session.startLive(stream)
         }
     }
@@ -105,3 +106,17 @@ class WelcomeViewController: UIViewController {
     }
 }
 
+extension WelcomeViewController: LFLiveSessionDelegate {
+    
+    func liveSession(_ session: LFLiveSession?, liveStateDidChange state: LFLiveState) {
+        print("State: \(state.hashValue)")
+    }
+    
+    func liveSession(_ session: LFLiveSession?, errorCode: LFLiveSocketErrorCode) {
+        print("Error: \(errorCode.hashValue)")
+    }
+    
+    func liveSession(_ session: LFLiveSession?, debugInfo: LFLiveDebug?) {
+        print("Debug info: \(debugInfo.debugDescription)")
+    }
+}

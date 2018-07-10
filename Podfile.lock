@@ -1,16 +1,22 @@
 PODS:
   - LFLiveKit (2.6)
+  - NVActivityIndicatorView (4.2.1):
+    - NVActivityIndicatorView/Presenter (= 4.2.1)
+  - NVActivityIndicatorView/Presenter (4.2.1)
 
 DEPENDENCIES:
   - LFLiveKit
+  - NVActivityIndicatorView
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - LFLiveKit
+    - NVActivityIndicatorView
 
 SPEC CHECKSUMS:
   LFLiveKit: 2219563721f8aa0f188effc3395a06e2d53b23f2
+  NVActivityIndicatorView: 8068ba3ad39cb44cbaab25d89ff2546b3f092681
 
-PODFILE CHECKSUM: a72ba900f983b3fb984bc51d828afa0f5e6f1008
+PODFILE CHECKSUM: ea93074ca1bde2294f8b3862dc1f5f0026d5ec5e
 
 COCOAPODS: 1.5.0

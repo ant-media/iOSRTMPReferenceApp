@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E8B204A6BEADEBAF301F373EF25773CC"
-               BuildableName = "Pods_RTMP_Ref_App.framework"
-               BlueprintName = "Pods-RTMP Ref App"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "789A728C20F2596A00F07060"
+               BuildableName = "RTMP Ref App.app"
+               BlueprintName = "RTMP Ref App"
+               ReferencedContainer = "container:RTMP Ref App.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,6 +29,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "789A728C20F2596A00F07060"
+            BuildableName = "RTMP Ref App.app"
+            BlueprintName = "RTMP Ref App"
+            ReferencedContainer = "container:RTMP Ref App.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -42,15 +51,23 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E8B204A6BEADEBAF301F373EF25773CC"
-            BuildableName = "Pods_RTMP_Ref_App.framework"
-            BlueprintName = "Pods-RTMP Ref App"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            BlueprintIdentifier = "789A728C20F2596A00F07060"
+            BuildableName = "RTMP Ref App.app"
+            BlueprintName = "RTMP Ref App"
+            ReferencedContainer = "container:RTMP Ref App.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "OS_ACTIVITY_MODE"
+            value = "disable"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -60,6 +77,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "789A728C20F2596A00F07060"
+            BuildableName = "RTMP Ref App.app"
+            BlueprintName = "RTMP Ref App"
+            ReferencedContainer = "container:RTMP Ref App.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
