@@ -84,6 +84,9 @@
                                         <state key="normal" title="Set server ip">
                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="serverTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RJK-tt-AOS"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nif-2j-axe">
                                         <rect key="frame" x="210" y="90" width="30" height="30"/>
@@ -146,7 +149,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="last_used" width="128" height="128"/>
+        <image name="last_used" width="64" height="64"/>
         <image name="logo" width="512" height="512"/>
     </resources>
 </document>

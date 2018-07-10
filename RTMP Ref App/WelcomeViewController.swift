@@ -52,6 +52,36 @@ class WelcomeViewController: UIViewController {
         })
     }
     
+    @IBAction func connectButton(_ sender: UIButton ) {
+        if roomField.text!.count == 0 {
+            AlertHelper.getInstance().show("Caution!", message: "Please fill room field")
+        } else if (Defaults[.server] ?? "").count < 2 {
+            AlertHelper.getInstance().show("Caution!", message: "Please set server ip")
+        } else {
+            print("Ready to go")
+        }
+    }
+    
+    @IBAction func refreshTapped(_ sender: UIButton) {
+        if let room = Defaults[.room] {
+            self.roomField.text = room
+        }
+    }
+    
+    @IBAction func serverTapped(_ sender: UIButton) {
+        AlertHelper.getInstance().addOption("Save", onSelect: {
+            (address) in
+            if (address!.count > 0) {
+                self.serverButton.setTitle("Server ip: \(address!)", for: .normal)
+                Defaults[.server] = address
+            } else {
+                self.serverButton.setTitle("Set server ip", for: .normal)
+                Defaults[.server] = ""
+            }
+        })
+        AlertHelper.getInstance().showInput(self, title: "IP Address", message: "Please enter your server address (no need protocol)")
+    }
+    
     private func setGesture() {
         self.tapGesture = UITapGestureRecognizer(target: self, action: #selector(WelcomeViewController.toggleContainer))
         self.tapGesture.numberOfTapsRequired = 1
