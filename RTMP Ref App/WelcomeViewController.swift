@@ -8,6 +8,7 @@
 
 import UIKit
 import LFLiveKit
+import NVActivityIndicatorView
 
 class WelcomeViewController: UIViewController {
     
@@ -15,6 +16,7 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var logoTopAnchor: NSLayoutConstraint!
     @IBOutlet weak var roomField: UITextField!
     @IBOutlet weak var connectButton: UIButton!
+    @IBOutlet weak var loadingView: NVActivityIndicatorView!
     @IBOutlet weak var actionContainer: UIView! {
         didSet {
             self.actionContainer.alpha = 0
@@ -32,6 +34,7 @@ class WelcomeViewController: UIViewController {
 
     var isConnected = false
     var tapGesture: UITapGestureRecognizer!
+    var sessionState: LFLiveState = LFLiveState.ready
     var session: LFLiveSession = {
         let audioConfiguration = LFLiveAudioConfiguration.defaultConfiguration(for: LFLiveAudioQuality.high)
         let videoConfiguration = LFLiveVideoConfiguration.defaultConfiguration(for: LFLiveVideoQuality.low3)
@@ -110,10 +113,49 @@ extension WelcomeViewController: LFLiveSessionDelegate {
     
     func liveSession(_ session: LFLiveSession?, liveStateDidChange state: LFLiveState) {
         print("State: \(state.hashValue)")
+        switch state {
+            case LFLiveState.ready:
+                break
+            case LFLiveState.pending:
+                self.connectButton.animateAlpha()
+                self.loadingView.startAnimating()
+                break
+            case LFLiveState.start:
+                print("Ready to start")
+                break
+            case LFLiveState.error:
+                if (self.sessionState != .error) {
+                    self.sessionState = .error
+                    self.loadingView.stopAnimating()
+                    self.connectButton.animateAlpha()
+                }
+                break
+            case LFLiveState.stop:
+                break
+            default:
+                break
+        }
+
     }
     
     func liveSession(_ session: LFLiveSession?, errorCode: LFLiveSocketErrorCode) {
-        print("Error: \(errorCode.hashValue)")
+        print("Error: \(errorCode.rawValue)")
+        var message: String = ""
+        switch errorCode.rawValue {
+            case 201:
+                break
+            case 202:
+                break
+            case 203:
+                break
+            case 204:
+                break
+            case 205:
+                break
+            default:
+                break
+        }
+        AlertHelper.getInstance().show("Error", message: "Failed to connect. Please check availability of Ant Media Server")
     }
     
     func liveSession(_ session: LFLiveSession?, debugInfo: LFLiveDebug?) {
