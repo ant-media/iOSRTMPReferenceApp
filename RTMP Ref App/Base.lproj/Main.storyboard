@@ -71,6 +71,9 @@
                                         <state key="normal" title="Connect">
                                             <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="connectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EVr-bg-yXe"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFB-Pe-DJO">
                                         <rect key="frame" x="6" y="211" width="233" height="28"/>
@@ -82,11 +85,24 @@
                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nif-2j-axe">
+                                        <rect key="frame" x="210" y="90" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="0lh-0k-cJU"/>
+                                            <constraint firstAttribute="width" constant="30" id="iVs-ZL-Rko"/>
+                                        </constraints>
+                                        <state key="normal" image="last_used"/>
+                                        <connections>
+                                            <action selector="refreshTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GLy-yY-GKK"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="nif-2j-axe" secondAttribute="trailing" constant="5" id="2pB-mc-woM"/>
                                     <constraint firstAttribute="height" constant="260" id="4g7-N9-Vn6"/>
                                     <constraint firstAttribute="trailing" secondItem="mfx-UW-O5d" secondAttribute="trailing" constant="3" id="6rU-pY-Xcw"/>
+                                    <constraint firstItem="nif-2j-axe" firstAttribute="top" secondItem="Oyw-DH-UaN" secondAttribute="bottom" constant="20" id="Ahb-B7-NkM"/>
                                     <constraint firstAttribute="trailing" secondItem="Oyw-DH-UaN" secondAttribute="trailing" constant="5" id="Cbr-Za-IbB"/>
                                     <constraint firstItem="VFB-Pe-DJO" firstAttribute="top" secondItem="mfx-UW-O5d" secondAttribute="bottom" constant="2" id="MgT-HG-PyY"/>
                                     <constraint firstItem="Oyw-DH-UaN" firstAttribute="leading" secondItem="onv-Fk-qH6" secondAttribute="leading" constant="5" id="O1I-Gu-O1Y"/>
@@ -101,6 +117,7 @@
                                     <constraint firstItem="mfx-UW-O5d" firstAttribute="leading" secondItem="onv-Fk-qH6" secondAttribute="leading" constant="3" id="nsT-HP-kmu"/>
                                     <constraint firstAttribute="trailing" secondItem="VFB-Pe-DJO" secondAttribute="trailing" constant="6" id="o8Z-sG-PTU"/>
                                     <constraint firstAttribute="trailing" secondItem="XyP-T6-Grw" secondAttribute="trailing" constant="3" id="oeT-h2-ub6"/>
+                                    <constraint firstItem="XyP-T6-Grw" firstAttribute="top" secondItem="nif-2j-axe" secondAttribute="bottom" constant="3" id="xfo-R9-2HD"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -129,6 +146,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="last_used" width="128" height="128"/>
         <image name="logo" width="512" height="512"/>
     </resources>
 </document>
