@@ -152,26 +152,7 @@ extension WelcomeViewController: LFLiveSessionDelegate {
     }
     
     func liveSession(_ session: LFLiveSession?, errorCode: LFLiveSocketErrorCode) {
-        var message: String = ""
-        switch errorCode.rawValue {
-            case 201:
-                message = "Preview failed."
-                break
-            case 202:
-                message = "Failed to get streaming information. Please check availability of Ant Media Server."
-                break
-            case 203:
-                message = "Failed to connect to the socket. Please check your network."
-                break
-            case 204:
-                message = "Verify server failed. Please check server url."
-                break
-            case 205:
-                message = "Server timeout. Please check network availability and server variables."
-                break
-            default:
-                break
-        }
+        let message: String = Messages.getLocalizedError(with: errorCode)
         print("Error: \(errorCode.rawValue) -> \(message)")
         AlertHelper.getInstance().show("Error", message: message)
     }
