@@ -15,4 +15,15 @@ class VideoViewController: UIViewController {
         print("viewDidLoad")
     }
 
+    @IBAction func beautyTapped(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func cameraTapped(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func closeTapped(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
