@@ -181,6 +181,9 @@ Reference Application</string>
                                     <constraint firstAttribute="width" constant="22" id="dsP-4v-CTf"/>
                                 </constraints>
                                 <state key="normal" image="close_preview"/>
+                                <connections>
+                                    <action selector="closeTapped:" destination="5bu-sg-ffI" eventType="touchUpInside" id="Hy6-D7-gdc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhQ-l2-s3m">
                                 <rect key="frame" x="299" y="25" width="22" height="22"/>
@@ -189,6 +192,9 @@ Reference Application</string>
                                     <constraint firstAttribute="width" constant="22" id="wMA-oc-cM1"/>
                                 </constraints>
                                 <state key="normal" image="camera_beauty"/>
+                                <connections>
+                                    <action selector="beautyTapped:" destination="5bu-sg-ffI" eventType="touchUpInside" id="vwY-sA-Nzj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVx-oE-36h">
                                 <rect key="frame" x="261" y="25" width="22" height="22"/>
@@ -197,6 +203,9 @@ Reference Application</string>
                                     <constraint firstAttribute="width" constant="22" id="urK-p3-KrD"/>
                                 </constraints>
                                 <state key="normal" image="camera_preview"/>
+                                <connections>
+                                    <action selector="cameraTapped:" destination="5bu-sg-ffI" eventType="touchUpInside" id="15v-91-gcg"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status: Connecting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzX-tC-MyX">
                                 <rect key="frame" x="16" y="25" width="229" height="21"/>
