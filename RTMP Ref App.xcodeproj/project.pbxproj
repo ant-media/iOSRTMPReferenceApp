@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		786EC4F020F5267300A9871C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786EC4EF20F5267300A9871C /* UIView.swift */; };
+		786EC4F220F6054700A9871C /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786EC4F120F6054700A9871C /* VideoViewController.swift */; };
 		789A729120F2596A00F07060 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789A729020F2596A00F07060 /* AppDelegate.swift */; };
 		789A729320F2596A00F07060 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789A729220F2596A00F07060 /* WelcomeViewController.swift */; };
 		789A729620F2596A00F07060 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 789A729420F2596A00F07060 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		7201D5B51A5EECA175A815D6 /* Pods_RTMP_Ref_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RTMP_Ref_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		786EC4EF20F5267300A9871C /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		786EC4F120F6054700A9871C /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		789A728D20F2596A00F07060 /* RTMP Ref App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RTMP Ref App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		789A729020F2596A00F07060 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		789A729220F2596A00F07060 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			children = (
 				789A729020F2596A00F07060 /* AppDelegate.swift */,
 				789A729220F2596A00F07060 /* WelcomeViewController.swift */,
+				786EC4F120F6054700A9871C /* VideoViewController.swift */,
 				789A729420F2596A00F07060 /* Main.storyboard */,
 				789A729720F2596D00F07060 /* Assets.xcassets */,
 				789A729920F2596D00F07060 /* LaunchScreen.storyboard */,
@@ -246,6 +249,7 @@
 			files = (
 				786EC4F020F5267300A9871C /* UIView.swift in Sources */,
 				789A72AB20F3843B00F07060 /* AlertHelper.swift in Sources */,
+				786EC4F220F6054700A9871C /* VideoViewController.swift in Sources */,
 				789A72AE20F3847A00F07060 /* UIApplication.swift in Sources */,
 				789A729320F2596A00F07060 /* WelcomeViewController.swift in Sources */,
 				789A72A720F3797100F07060 /* Defaults.swift in Sources */,
