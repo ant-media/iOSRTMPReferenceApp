@@ -98,6 +98,10 @@ class WelcomeViewController: UIViewController {
         AlertHelper.getInstance().showInput(self, title: "IP Address", message: "Please enter your server address (no need protocol)")
     }
     
+    private func readyToStart() {
+        
+    }
+    
     private func setGesture() {
         self.tapGesture = UITapGestureRecognizer(target: self, action: #selector(WelcomeViewController.toggleContainer))
         self.tapGesture.numberOfTapsRequired = 1
@@ -121,7 +125,7 @@ extension WelcomeViewController: LFLiveSessionDelegate {
                 self.loadingView.startAnimating()
                 break
             case LFLiveState.start:
-                print("Ready to start")
+                self.readyToStart()
                 break
             case LFLiveState.error:
                 if (self.sessionState != .error) {
@@ -131,15 +135,18 @@ extension WelcomeViewController: LFLiveSessionDelegate {
                 }
                 break
             case LFLiveState.stop:
+                if (self.sessionState != .stop) {
+                    self.sessionState = .stop
+                    self.loadingView.stopAnimating()
+                    self.connectButton.animateAlpha()
+                }
                 break
             default:
                 break
         }
-
     }
     
     func liveSession(_ session: LFLiveSession?, errorCode: LFLiveSocketErrorCode) {
-        print("Error: \(errorCode.rawValue)")
         var message: String = ""
         switch errorCode.rawValue {
             case 201:
@@ -160,6 +167,7 @@ extension WelcomeViewController: LFLiveSessionDelegate {
             default:
                 break
         }
+        print("Error: \(errorCode.rawValue) -> \(message)")
         AlertHelper.getInstance().show("Error", message: message)
     }
     
