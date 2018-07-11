@@ -13,6 +13,12 @@ class VideoViewController: UIViewController {
     
     var streamUrl: String!
     var streamName: String!
+    var session: LFLiveSession = {
+        let audioConfiguration = LFLiveAudioConfiguration.defaultConfiguration(for: LFLiveAudioQuality.high)
+        let videoConfiguration = LFLiveVideoConfiguration.defaultConfiguration(for: LFLiveVideoQuality.low3)
+        let session = LFLiveSession(audioConfiguration: audioConfiguration, videoConfiguration: videoConfiguration)
+        return session!
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
