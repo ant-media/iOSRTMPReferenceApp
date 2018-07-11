@@ -99,6 +99,7 @@ class WelcomeViewController: UIViewController {
     }
     
     private func readyToStart() {
+        Defaults[.room] = roomField.text!
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "Video") as! VideoViewController
         self.present(controller, animated: true, completion: nil)

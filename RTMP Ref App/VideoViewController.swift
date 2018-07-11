@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import LFLiveKit
 
 class VideoViewController: UIViewController {
     
+    var streamUrl: String!
+    var streamName: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("viewDidLoad")
+        self.streamUrl = Defaults[.server]!
+        self.streamName = Defaults[.room]!
     }
 
     @IBAction func beautyTapped(_ sender: UIButton) {
