@@ -127,6 +127,8 @@ extension WelcomeViewController: LFLiveSessionDelegate {
                 self.loadingView.startAnimating()
                 break
             case LFLiveState.start:
+                self.loadingView.stopAnimating()
+                self.connectButton.animateAlpha()
                 self.readyToStart()
                 break
             case LFLiveState.error:
