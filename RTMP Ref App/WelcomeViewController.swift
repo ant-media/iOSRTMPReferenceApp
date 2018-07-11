@@ -32,8 +32,10 @@ class WelcomeViewController: UIViewController {
         }
     }
 
-    var isConnected = false
+    var isVideoGranted: Bool = false
+    var isAudioGranted: Bool = false
     var tapGesture: UITapGestureRecognizer!
+    
     var sessionState: LFLiveState = LFLiveState.ready
     var session: LFLiveSession = {
         let audioConfiguration = LFLiveAudioConfiguration.defaultConfiguration(for: LFLiveAudioQuality.high)
@@ -99,16 +101,80 @@ class WelcomeViewController: UIViewController {
     }
     
     private func readyToStart() {
-        Defaults[.room] = roomField.text!
-        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "Video") as! VideoViewController
-        self.present(controller, animated: true, completion: nil)
+        if isVideoGranted && isAudioGranted {
+            Defaults[.room] = roomField.text!
+            self.loadingView.stopAnimating()
+            self.connectButton.animateAlpha()
+            
+            let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "Video") as! VideoViewController
+            self.present(controller, animated: true, completion: nil)
+        } else {
+            if !isVideoGranted {
+                requestAccessForVideo()
+                return
+            }
+            
+            if !isAudioGranted {
+                requestAccessForAudio()
+            }
+        }
     }
     
     private func setGesture() {
         self.tapGesture = UITapGestureRecognizer(target: self, action: #selector(WelcomeViewController.toggleContainer))
         self.tapGesture.numberOfTapsRequired = 1
         self.view.addGestureRecognizer(tapGesture)
+    }
+    
+    private func requestAccessForVideo() -> Void {
+        let status = AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
+        switch status  {
+            case AVAuthorizationStatus.notDetermined:
+                AVCaptureDevice.requestAccess(for: AVMediaType.video, completionHandler: { (granted) in
+                    if (granted) {
+                        DispatchQueue.main.async {
+                            self.isVideoGranted = true
+                            self.readyToStart()
+                        }
+                    }
+                })
+                break
+            case AVAuthorizationStatus.authorized:
+                print("Video -> Authorized")
+                self.isVideoGranted = true
+                self.readyToStart()
+                break
+            case AVAuthorizationStatus.denied, AVAuthorizationStatus.restricted:
+                print("Video -> Denied")
+                AlertHelper.getInstance().show("Error!", message: "Application can not access camera. Please go to settings and make it enabled")
+                break
+        }
+    }
+    
+    private func requestAccessForAudio() -> Void {
+        let status = AVCaptureDevice.authorizationStatus(for:AVMediaType.audio)
+        switch status  {
+            case AVAuthorizationStatus.notDetermined:
+                AVCaptureDevice.requestAccess(for: AVMediaType.audio, completionHandler: { (granted) in
+                    if (granted) {
+                        DispatchQueue.main.async {
+                            self.isAudioGranted = true
+                            self.readyToStart()
+                        }
+                    }
+                })
+                break
+            case AVAuthorizationStatus.authorized:
+                print("Audio -> Authorized")
+                self.isAudioGranted = true
+                self.readyToStart()
+                break
+            case AVAuthorizationStatus.denied, AVAuthorizationStatus.restricted:
+                print("Audio -> Denied")
+                AlertHelper.getInstance().show("Error!", message: "Application can not access camera. Please go to settings and make it enabled")
+                break
+        }
     }
     
     @objc private func toggleContainer() {
@@ -128,8 +194,6 @@ extension WelcomeViewController: LFLiveSessionDelegate {
                 self.loadingView.startAnimating()
                 break
             case LFLiveState.start:
-                self.loadingView.stopAnimating()
-                self.connectButton.animateAlpha()
                 self.readyToStart()
                 break
             case LFLiveState.error:
