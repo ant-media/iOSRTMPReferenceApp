@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		786EC4F020F5267300A9871C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786EC4EF20F5267300A9871C /* UIView.swift */; };
 		786EC4F220F6054700A9871C /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786EC4F120F6054700A9871C /* VideoViewController.swift */; };
+		786EC4F420F61A9300A9871C /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786EC4F320F61A9300A9871C /* Messages.swift */; };
 		789A729120F2596A00F07060 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789A729020F2596A00F07060 /* AppDelegate.swift */; };
 		789A729320F2596A00F07060 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789A729220F2596A00F07060 /* WelcomeViewController.swift */; };
 		789A729620F2596A00F07060 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 789A729420F2596A00F07060 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		7201D5B51A5EECA175A815D6 /* Pods_RTMP_Ref_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RTMP_Ref_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		786EC4EF20F5267300A9871C /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		786EC4F120F6054700A9871C /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		786EC4F320F61A9300A9871C /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		789A728D20F2596A00F07060 /* RTMP Ref App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RTMP Ref App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		789A729020F2596A00F07060 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		789A729220F2596A00F07060 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				789A72A620F3797100F07060 /* Defaults.swift */,
 				789A72A820F3817700F07060 /* Run.swift */,
 				789A72AA20F3843B00F07060 /* AlertHelper.swift */,
+				786EC4F320F61A9300A9871C /* Messages.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				789A729320F2596A00F07060 /* WelcomeViewController.swift in Sources */,
 				789A72A720F3797100F07060 /* Defaults.swift in Sources */,
 				789A729120F2596A00F07060 /* AppDelegate.swift in Sources */,
+				786EC4F420F61A9300A9871C /* Messages.swift in Sources */,
 				789A72A920F3817700F07060 /* Run.swift in Sources */,
 				789A72A520F378B400F07060 /* SwiftyUserDefaults.swift in Sources */,
 			);
@@ -401,12 +405,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K5X5P5RAB3;
 				INFOPLIST_FILE = "RTMP Ref App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.antmedia.rtmp.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.antmedia.ios.reference;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -419,6 +424,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K5X5P5RAB3;
 				INFOPLIST_FILE = "RTMP Ref App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
