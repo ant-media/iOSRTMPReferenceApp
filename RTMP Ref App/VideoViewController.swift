@@ -11,6 +11,8 @@ import LFLiveKit
 
 class VideoViewController: UIViewController {
     
+    @IBOutlet weak var statusLabel: UILabel!
+    
     var streamUrl: String!
     var streamName: String!
     var session: LFLiveSession = {
@@ -26,6 +28,14 @@ class VideoViewController: UIViewController {
         self.streamName = Defaults[.room]!
         self.session.delegate = self
         self.session.preView = self.view
+        self.session.running = true
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let stream = LFLiveStreamInfo()
+        stream.url = "rtmp://\(self.streamUrl!)/LiveApp/\(self.streamName!)"
+        session.startLive(stream)
     }
 
     @IBAction func beautyTapped(_ sender: UIButton) {
@@ -37,6 +47,7 @@ class VideoViewController: UIViewController {
     }
     
     @IBAction func closeTapped(_ sender: UIButton) {
+        self.session.stopLive()
         self.dismiss(animated: true, completion: nil)
     }
 }
@@ -46,14 +57,19 @@ extension VideoViewController: LFLiveSessionDelegate {
         print("State: \(state.hashValue)")
         switch state {
             case LFLiveState.ready:
+                statusLabel.text = "Status: Not connected"
                 break
             case LFLiveState.pending:
+                statusLabel.text = "Status: Connecting"
                 break
             case LFLiveState.start:
+                statusLabel.text = "Status: Live"
                 break
             case LFLiveState.error:
+                statusLabel.text = "Status: Error"
                 break
             case LFLiveState.stop:
+                statusLabel.text = "Status: Stop"
                 break
             default:
                 break
