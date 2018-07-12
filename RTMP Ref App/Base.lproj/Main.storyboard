@@ -54,7 +54,7 @@ Reference Application</string>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XyP-T6-Grw">
                                         <rect key="frame" x="3" y="123" width="239" height="1.5"/>
@@ -231,6 +231,9 @@ Reference Application</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AvY-GW-gfq"/>
                     </view>
+                    <connections>
+                        <outlet property="statusLabel" destination="XzX-tC-MyX" id="BTG-yb-F59"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k7u-uL-Dfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
