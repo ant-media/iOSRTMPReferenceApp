@@ -34,6 +34,8 @@ class WelcomeViewController: UIViewController {
 
     var isVideoGranted: Bool = false
     var isAudioGranted: Bool = false
+    var cancellable: SimpleClosure!
+    var lastErrorCode: LFLiveSocketErrorCode!
     var tapGesture: UITapGestureRecognizer!
     
     var sessionState: LFLiveState = LFLiveState.ready
@@ -65,6 +67,7 @@ class WelcomeViewController: UIViewController {
     }
     
     @IBAction func connectButton(_ sender: UIButton ) {
+        self.view.endEditing(true)
         if roomField.text!.count == 0 {
             AlertHelper.getInstance().show("Caution!", message: "Please fill room field")
         } else if (Defaults[.server] ?? "").count < 2 {
@@ -77,6 +80,17 @@ class WelcomeViewController: UIViewController {
             let stream = LFLiveStreamInfo()
             stream.url = "rtmp://\(url)/LiveApp/\(room)"
             session.startLive(stream)
+            
+            self.cancellable = Run.afterDelay(10, block: {
+                if self.session.state == .pending {
+                    Run.onMainThread {
+                        self.session.stopLive()
+                        self.loadingView.stopAnimating()
+                        self.connectButton.animateAlpha()
+                        AlertHelper.getInstance().show("Error", message: "Server timeout. Please check network availability and server variables.")
+                    }
+                }
+            })
         }
     }
     
@@ -103,8 +117,10 @@ class WelcomeViewController: UIViewController {
     private func readyToStart() {
         if isVideoGranted && isAudioGranted {
             Defaults[.room] = roomField.text!
+            self.cancellable()
+            self.session.stopLive()
             self.loadingView.stopAnimating()
-            self.connectButton.animateAlpha()
+            self.lastErrorCode = nil
             
             let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "Video") as! VideoViewController
@@ -216,9 +232,11 @@ extension WelcomeViewController: LFLiveSessionDelegate {
     }
     
     func liveSession(_ session: LFLiveSession?, errorCode: LFLiveSocketErrorCode) {
-        let message: String = Messages.getLocalizedError(with: errorCode)
-        print("Error: \(errorCode.rawValue) -> \(message)")
-        AlertHelper.getInstance().show("Error", message: message)
+        if (self.lastErrorCode == nil) {
+            self.lastErrorCode = errorCode
+            let message: String = Messages.getLocalizedError(with: errorCode)
+            AlertHelper.getInstance().show("Error", message: message)
+        }
     }
     
     func liveSession(_ session: LFLiveSession?, debugInfo: LFLiveDebug?) {
