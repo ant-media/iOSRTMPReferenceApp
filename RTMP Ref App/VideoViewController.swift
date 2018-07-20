@@ -12,6 +12,8 @@ import LFLiveKit
 class VideoViewController: UIViewController {
     
     @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var cameraButton: UIButton!
+    @IBOutlet weak var beautyButton: UIButton!
     
     var streamUrl: String!
     var streamName: String!
@@ -39,11 +41,13 @@ class VideoViewController: UIViewController {
     }
 
     @IBAction func beautyTapped(_ sender: UIButton) {
-        
+        session.beautyFace = !session.beautyFace;
+        beautyButton.isSelected = !session.beautyFace
     }
     
     @IBAction func cameraTapped(_ sender: UIButton) {
-        
+        let devicePositon = session.captureDevicePosition;
+        session.captureDevicePosition = (devicePositon == AVCaptureDevice.Position.back) ? AVCaptureDevice.Position.front : AVCaptureDevice.Position.back
     }
     
     @IBAction func closeTapped(_ sender: UIButton) {
