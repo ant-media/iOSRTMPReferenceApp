@@ -42,7 +42,7 @@ class VideoViewController: UIViewController {
 
     @IBAction func beautyTapped(_ sender: UIButton) {
         self.session.beautyFace = !session.beautyFace
-        self.beautyButton.isSelected = !session.beautyFace
+        self.beautyButton.isSelected = !self.beautyButton.isSelected
     }
     
     @IBAction func cameraTapped(_ sender: UIButton) {

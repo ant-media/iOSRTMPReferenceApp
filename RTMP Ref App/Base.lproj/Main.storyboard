@@ -185,7 +185,7 @@ Reference Application</string>
                                     <action selector="closeTapped:" destination="5bu-sg-ffI" eventType="touchUpInside" id="Hy6-D7-gdc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhQ-l2-s3m">
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhQ-l2-s3m">
                                 <rect key="frame" x="299" y="25" width="22" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="fts-Nb-KVc"/>
