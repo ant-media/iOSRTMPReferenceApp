@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78466D1E2101E7310098865B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78466D1D2101E7310098865B /* UIKit.framework */; };
+		78466D202101E73A0098865B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78466D1F2101E73A0098865B /* AudioToolbox.framework */; };
+		78466D222101E74D0098865B /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78466D212101E74D0098865B /* VideoToolbox.framework */; };
+		78466D242101E75D0098865B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78466D232101E75D0098865B /* AVFoundation.framework */; };
+		78466D262101E76B0098865B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 78466D252101E76B0098865B /* libz.tbd */; };
 		786EC4F020F5267300A9871C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786EC4EF20F5267300A9871C /* UIView.swift */; };
 		786EC4F220F6054700A9871C /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786EC4F120F6054700A9871C /* VideoViewController.swift */; };
 		786EC4F420F61A9300A9871C /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786EC4F320F61A9300A9871C /* Messages.swift */; };
@@ -26,6 +31,11 @@
 
 /* Begin PBXFileReference section */
 		7201D5B51A5EECA175A815D6 /* Pods_RTMP_Ref_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RTMP_Ref_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78466D1D2101E7310098865B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		78466D1F2101E73A0098865B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		78466D212101E74D0098865B /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		78466D232101E75D0098865B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		78466D252101E76B0098865B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		786EC4EF20F5267300A9871C /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		786EC4F120F6054700A9871C /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		786EC4F320F61A9300A9871C /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
@@ -51,6 +61,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78466D262101E76B0098865B /* libz.tbd in Frameworks */,
+				78466D242101E75D0098865B /* AVFoundation.framework in Frameworks */,
+				78466D222101E74D0098865B /* VideoToolbox.framework in Frameworks */,
+				78466D202101E73A0098865B /* AudioToolbox.framework in Frameworks */,
+				78466D1E2101E7310098865B /* UIKit.framework in Frameworks */,
 				78FFA5EF20F75C26006959CA /* libstdc++.tbd in Frameworks */,
 				A8513565809EAA23673B8547 /* Pods_RTMP_Ref_App.framework in Frameworks */,
 			);
@@ -62,6 +77,11 @@
 		0CCD9C0CA1302966B4292F41 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				78466D252101E76B0098865B /* libz.tbd */,
+				78466D232101E75D0098865B /* AVFoundation.framework */,
+				78466D212101E74D0098865B /* VideoToolbox.framework */,
+				78466D1F2101E73A0098865B /* AudioToolbox.framework */,
+				78466D1D2101E7310098865B /* UIKit.framework */,
 				78FFA5EE20F75C26006959CA /* libstdc++.tbd */,
 				7201D5B51A5EECA175A815D6 /* Pods_RTMP_Ref_App.framework */,
 			);
