@@ -191,7 +191,8 @@ Reference Application</string>
                                     <constraint firstAttribute="height" constant="22" id="fts-Nb-KVc"/>
                                     <constraint firstAttribute="width" constant="22" id="wMA-oc-cM1"/>
                                 </constraints>
-                                <state key="normal" image="camera_beauty"/>
+                                <state key="normal" image="camera_beauty_close"/>
+                                <state key="selected" image="camera_beauty"/>
                                 <connections>
                                     <action selector="beautyTapped:" destination="5bu-sg-ffI" eventType="touchUpInside" id="vwY-sA-Nzj"/>
                                 </connections>
@@ -232,6 +233,8 @@ Reference Application</string>
                         <viewLayoutGuide key="safeArea" id="AvY-GW-gfq"/>
                     </view>
                     <connections>
+                        <outlet property="beautyButton" destination="bhQ-l2-s3m" id="OxC-OK-tQF"/>
+                        <outlet property="cameraButton" destination="HVx-oE-36h" id="e3d-0V-rh1"/>
                         <outlet property="statusLabel" destination="XzX-tC-MyX" id="BTG-yb-F59"/>
                     </connections>
                 </viewController>
@@ -242,6 +245,7 @@ Reference Application</string>
     </scenes>
     <resources>
         <image name="camera_beauty" width="23" height="23"/>
+        <image name="camera_beauty_close" width="25" height="23"/>
         <image name="camera_preview" width="22" height="19"/>
         <image name="close_preview" width="18" height="18"/>
         <image name="last_used" width="64" height="64"/>
