@@ -41,13 +41,13 @@ class VideoViewController: UIViewController {
     }
 
     @IBAction func beautyTapped(_ sender: UIButton) {
-        session.beautyFace = !session.beautyFace;
-        beautyButton.isSelected = !session.beautyFace
+        self.session.beautyFace = !session.beautyFace
+        self.beautyButton.isSelected = !session.beautyFace
     }
     
     @IBAction func cameraTapped(_ sender: UIButton) {
         let devicePositon = session.captureDevicePosition;
-        session.captureDevicePosition = (devicePositon == AVCaptureDevice.Position.back) ? AVCaptureDevice.Position.front : AVCaptureDevice.Position.back
+        self.session.captureDevicePosition = (devicePositon == AVCaptureDevice.Position.back) ? AVCaptureDevice.Position.front : AVCaptureDevice.Position.back
     }
     
     @IBAction func closeTapped(_ sender: UIButton) {
