@@ -14,6 +14,15 @@ class VideoViewController: UIViewController {
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var beautyButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton! {
+        didSet {
+            self.stopButton.transform = CGAffineTransform(translationX: 0, y: -200).concatenating(CGAffineTransform(scaleX: 0, y: 0))
+            self.stopButton.alpha = 0
+            self.stopButton.layer.cornerRadius = 5
+            self.stopButton.layer.borderWidth = 5.0
+            self.stopButton.layer.borderColor = UIColor.white.cgColor
+        }
+    }
     
     var streamUrl: String!
     var streamName: String!
@@ -37,7 +46,8 @@ class VideoViewController: UIViewController {
         super.viewDidAppear(animated)
         let stream = LFLiveStreamInfo()
         stream.url = "rtmp://\(self.streamUrl!)/LiveApp/\(self.streamName!)"
-        session.startLive(stream)
+        self.session.startLive(stream)
+        self.showButton()
     }
 
     @IBAction func beautyTapped(_ sender: UIButton) {
@@ -53,6 +63,14 @@ class VideoViewController: UIViewController {
     @IBAction func closeTapped(_ sender: UIButton) {
         self.session.stopLive()
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    private func showButton() {
+        UIView.animate(withDuration: 1.0, delay: 1.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 10, options: [.curveEaseOut], animations: {
+            self.stopButton.transform = .identity
+            self.stopButton.layer.cornerRadius = 5
+            self.stopButton.alpha = 1
+        }, completion: nil)
     }
 }
 
