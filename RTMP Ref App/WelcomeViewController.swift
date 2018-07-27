@@ -119,18 +119,18 @@ class WelcomeViewController: UIViewController {
             Defaults[.room] = roomField.text!
             self.cancellable()
             self.session.stopLive()
-            self.loadingView.stopAnimating()
             self.lastErrorCode = nil
             
             let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "Video") as! VideoViewController
-            self.present(controller, animated: true, completion: nil)
+            self.present(controller, animated: true, completion: {
+                self.loadingView.stopAnimating()
+            })
         } else {
             if !isVideoGranted {
                 requestAccessForVideo()
                 return
             }
-            
             if !isAudioGranted {
                 requestAccessForAudio()
             }
