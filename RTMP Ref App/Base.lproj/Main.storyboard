@@ -181,19 +181,8 @@ Reference Application</string>
                                     <constraint firstAttribute="height" constant="60" id="UJH-n7-BBg"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zeu-rB-xc7">
-                                <rect key="frame" x="327" y="23" width="32" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="aAf-td-2Zz"/>
-                                    <constraint firstAttribute="width" constant="32" id="dsP-4v-CTf"/>
-                                </constraints>
-                                <state key="normal" image="close_preview"/>
-                                <connections>
-                                    <action selector="closeTapped:" destination="5bu-sg-ffI" eventType="touchUpInside" id="Hy6-D7-gdc"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhQ-l2-s3m">
-                                <rect key="frame" x="283" y="23" width="32" height="32"/>
+                                <rect key="frame" x="327" y="23" width="32" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="fts-Nb-KVc"/>
                                     <constraint firstAttribute="width" constant="32" id="wMA-oc-cM1"/>
@@ -205,7 +194,7 @@ Reference Application</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVx-oE-36h">
-                                <rect key="frame" x="239" y="23" width="32" height="32"/>
+                                <rect key="frame" x="283" y="23" width="32" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="i3j-h1-Fln"/>
                                     <constraint firstAttribute="width" constant="32" id="urK-p3-KrD"/>
@@ -216,7 +205,7 @@ Reference Application</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status: Connecting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzX-tC-MyX">
-                                <rect key="frame" x="16" y="28" width="207" height="21"/>
+                                <rect key="frame" x="16" y="28" width="251" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="aXY-g3-EfH"/>
                                 </constraints>
@@ -224,21 +213,33 @@ Reference Application</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zeu-rB-xc7">
+                                <rect key="frame" x="154" y="581" width="66" height="66"/>
+                                <color key="backgroundColor" red="0.83529411764705885" green="0.35686274509803922" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="NTM-Mf-nhf"/>
+                                    <constraint firstAttribute="width" constant="66" id="iLA-fU-JUO"/>
+                                </constraints>
+                                <state key="normal" image="camera_stop"/>
+                                <connections>
+                                    <action selector="closeTapped:" destination="5bu-sg-ffI" eventType="touchUpInside" id="Hy6-D7-gdc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="bhQ-l2-s3m" firstAttribute="leading" secondItem="HVx-oE-36h" secondAttribute="trailing" constant="12" id="20F-4z-hte"/>
+                            <constraint firstItem="Zeu-rB-xc7" firstAttribute="centerX" secondItem="IAY-Ai-3gr" secondAttribute="centerX" id="6KG-Cc-POt"/>
+                            <constraint firstItem="AvY-GW-gfq" firstAttribute="trailing" secondItem="bhQ-l2-s3m" secondAttribute="trailing" constant="16" id="6hn-sz-dnE"/>
                             <constraint firstItem="XzX-tC-MyX" firstAttribute="leading" secondItem="AvY-GW-gfq" secondAttribute="leading" constant="16" id="9Ih-7P-g9V"/>
                             <constraint firstItem="gBR-N3-3lA" firstAttribute="top" secondItem="IAY-Ai-3gr" secondAttribute="top" id="EMt-Gs-WUe"/>
-                            <constraint firstItem="Zeu-rB-xc7" firstAttribute="top" secondItem="AvY-GW-gfq" secondAttribute="top" constant="3" id="Gq7-6I-OUo"/>
                             <constraint firstItem="gBR-N3-3lA" firstAttribute="leading" secondItem="AvY-GW-gfq" secondAttribute="leading" id="Iwf-dT-30d"/>
                             <constraint firstItem="bhQ-l2-s3m" firstAttribute="top" secondItem="AvY-GW-gfq" secondAttribute="top" constant="3" id="JeN-oM-Ig6"/>
+                            <constraint firstItem="AvY-GW-gfq" firstAttribute="bottom" secondItem="Zeu-rB-xc7" secondAttribute="bottom" constant="20" id="O4j-np-3o7"/>
                             <constraint firstItem="HVx-oE-36h" firstAttribute="leading" secondItem="XzX-tC-MyX" secondAttribute="trailing" constant="16" id="Zv2-KP-K0i"/>
                             <constraint firstItem="HVx-oE-36h" firstAttribute="top" secondItem="AvY-GW-gfq" secondAttribute="top" constant="3" id="fSz-A7-9QF"/>
-                            <constraint firstItem="Zeu-rB-xc7" firstAttribute="leading" secondItem="bhQ-l2-s3m" secondAttribute="trailing" constant="12" id="fxl-dE-Fl6"/>
                             <constraint firstItem="XzX-tC-MyX" firstAttribute="centerY" secondItem="HVx-oE-36h" secondAttribute="centerY" id="kVr-ZI-US2"/>
                             <constraint firstItem="gBR-N3-3lA" firstAttribute="trailing" secondItem="AvY-GW-gfq" secondAttribute="trailing" id="qNW-Lt-X1F"/>
-                            <constraint firstItem="AvY-GW-gfq" firstAttribute="trailing" secondItem="Zeu-rB-xc7" secondAttribute="trailing" constant="16" id="rR3-yq-GrF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AvY-GW-gfq"/>
                     </view>
@@ -246,6 +247,7 @@ Reference Application</string>
                         <outlet property="beautyButton" destination="bhQ-l2-s3m" id="OxC-OK-tQF"/>
                         <outlet property="cameraButton" destination="HVx-oE-36h" id="e3d-0V-rh1"/>
                         <outlet property="statusLabel" destination="XzX-tC-MyX" id="BTG-yb-F59"/>
+                        <outlet property="stopButton" destination="Zeu-rB-xc7" id="9GJ-g7-ySj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k7u-uL-Dfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -257,7 +259,7 @@ Reference Application</string>
         <image name="camera_beauty" width="23" height="23"/>
         <image name="camera_beauty_close" width="25" height="23"/>
         <image name="camera_preview" width="22" height="19"/>
-        <image name="close_preview" width="18" height="18"/>
+        <image name="camera_stop" width="42" height="42"/>
         <image name="last_used" width="64" height="64"/>
         <image name="logo" width="512" height="512"/>
     </resources>
