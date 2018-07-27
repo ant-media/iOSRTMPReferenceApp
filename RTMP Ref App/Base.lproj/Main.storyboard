@@ -174,11 +174,18 @@ Reference Application</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zeu-rB-xc7">
-                                <rect key="frame" x="337" y="25" width="22" height="22"/>
+                            <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBR-N3-3lA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="aAf-td-2Zz"/>
-                                    <constraint firstAttribute="width" constant="22" id="dsP-4v-CTf"/>
+                                    <constraint firstAttribute="height" constant="60" id="UJH-n7-BBg"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zeu-rB-xc7">
+                                <rect key="frame" x="327" y="23" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="aAf-td-2Zz"/>
+                                    <constraint firstAttribute="width" constant="32" id="dsP-4v-CTf"/>
                                 </constraints>
                                 <state key="normal" image="close_preview"/>
                                 <connections>
@@ -186,10 +193,10 @@ Reference Application</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhQ-l2-s3m">
-                                <rect key="frame" x="299" y="25" width="22" height="22"/>
+                                <rect key="frame" x="283" y="23" width="32" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="fts-Nb-KVc"/>
-                                    <constraint firstAttribute="width" constant="22" id="wMA-oc-cM1"/>
+                                    <constraint firstAttribute="height" constant="32" id="fts-Nb-KVc"/>
+                                    <constraint firstAttribute="width" constant="32" id="wMA-oc-cM1"/>
                                 </constraints>
                                 <state key="normal" image="camera_beauty_close"/>
                                 <state key="selected" image="camera_beauty"/>
@@ -198,10 +205,10 @@ Reference Application</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVx-oE-36h">
-                                <rect key="frame" x="261" y="25" width="22" height="22"/>
+                                <rect key="frame" x="239" y="23" width="32" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="i3j-h1-Fln"/>
-                                    <constraint firstAttribute="width" constant="22" id="urK-p3-KrD"/>
+                                    <constraint firstAttribute="height" constant="32" id="i3j-h1-Fln"/>
+                                    <constraint firstAttribute="width" constant="32" id="urK-p3-KrD"/>
                                 </constraints>
                                 <state key="normal" image="camera_preview"/>
                                 <connections>
@@ -209,7 +216,7 @@ Reference Application</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status: Connecting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzX-tC-MyX">
-                                <rect key="frame" x="16" y="25" width="229" height="21"/>
+                                <rect key="frame" x="16" y="28" width="207" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="aXY-g3-EfH"/>
                                 </constraints>
@@ -220,14 +227,17 @@ Reference Application</string>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bhQ-l2-s3m" firstAttribute="leading" secondItem="HVx-oE-36h" secondAttribute="trailing" constant="16" id="20F-4z-hte"/>
+                            <constraint firstItem="bhQ-l2-s3m" firstAttribute="leading" secondItem="HVx-oE-36h" secondAttribute="trailing" constant="12" id="20F-4z-hte"/>
                             <constraint firstItem="XzX-tC-MyX" firstAttribute="leading" secondItem="AvY-GW-gfq" secondAttribute="leading" constant="16" id="9Ih-7P-g9V"/>
-                            <constraint firstItem="Zeu-rB-xc7" firstAttribute="top" secondItem="AvY-GW-gfq" secondAttribute="top" constant="5" id="Gq7-6I-OUo"/>
-                            <constraint firstItem="bhQ-l2-s3m" firstAttribute="top" secondItem="AvY-GW-gfq" secondAttribute="top" constant="5" id="JeN-oM-Ig6"/>
+                            <constraint firstItem="gBR-N3-3lA" firstAttribute="top" secondItem="IAY-Ai-3gr" secondAttribute="top" id="EMt-Gs-WUe"/>
+                            <constraint firstItem="Zeu-rB-xc7" firstAttribute="top" secondItem="AvY-GW-gfq" secondAttribute="top" constant="3" id="Gq7-6I-OUo"/>
+                            <constraint firstItem="gBR-N3-3lA" firstAttribute="leading" secondItem="AvY-GW-gfq" secondAttribute="leading" id="Iwf-dT-30d"/>
+                            <constraint firstItem="bhQ-l2-s3m" firstAttribute="top" secondItem="AvY-GW-gfq" secondAttribute="top" constant="3" id="JeN-oM-Ig6"/>
                             <constraint firstItem="HVx-oE-36h" firstAttribute="leading" secondItem="XzX-tC-MyX" secondAttribute="trailing" constant="16" id="Zv2-KP-K0i"/>
-                            <constraint firstItem="HVx-oE-36h" firstAttribute="top" secondItem="AvY-GW-gfq" secondAttribute="top" constant="5" id="fSz-A7-9QF"/>
-                            <constraint firstItem="Zeu-rB-xc7" firstAttribute="leading" secondItem="bhQ-l2-s3m" secondAttribute="trailing" constant="16" id="fxl-dE-Fl6"/>
+                            <constraint firstItem="HVx-oE-36h" firstAttribute="top" secondItem="AvY-GW-gfq" secondAttribute="top" constant="3" id="fSz-A7-9QF"/>
+                            <constraint firstItem="Zeu-rB-xc7" firstAttribute="leading" secondItem="bhQ-l2-s3m" secondAttribute="trailing" constant="12" id="fxl-dE-Fl6"/>
                             <constraint firstItem="XzX-tC-MyX" firstAttribute="centerY" secondItem="HVx-oE-36h" secondAttribute="centerY" id="kVr-ZI-US2"/>
+                            <constraint firstItem="gBR-N3-3lA" firstAttribute="trailing" secondItem="AvY-GW-gfq" secondAttribute="trailing" id="qNW-Lt-X1F"/>
                             <constraint firstItem="AvY-GW-gfq" firstAttribute="trailing" secondItem="Zeu-rB-xc7" secondAttribute="trailing" constant="16" id="rR3-yq-GrF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AvY-GW-gfq"/>
