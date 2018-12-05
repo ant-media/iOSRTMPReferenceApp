@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,9 +36,10 @@
                                         </constraints>
                                         <attributedString key="attributedText">
                                             <fragment>
-                                                <string key="content">RTMP 
-Reference Application</string>
+                                                <string key="content">AntMedia
+RTMP Application</string>
                                                 <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                     <font key="NSFont" size="20" name="HelveticaNeue-Medium"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
@@ -64,7 +64,7 @@ Reference Application</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RPj-rL-vvK" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
-                                        <rect key="frame" x="70" y="174" width="105" height="35"/>
+                                        <rect key="frame" x="70" y="174.5" width="105" height="35"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="105" id="QAi-Yd-THo"/>
@@ -77,7 +77,7 @@ Reference Application</string>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfx-UW-O5d">
-                                        <rect key="frame" x="3" y="174" width="239" height="35"/>
+                                        <rect key="frame" x="3" y="174.5" width="239" height="35"/>
                                         <color key="backgroundColor" red="0.86666666670000003" green="0.13725490200000001" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="Wj2-2T-Nvq"/>
@@ -91,7 +91,7 @@ Reference Application</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFB-Pe-DJO">
-                                        <rect key="frame" x="6" y="211" width="233" height="28"/>
+                                        <rect key="frame" x="6" y="211.5" width="233" height="28"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="28" id="Xir-o4-Mde"/>
                                         </constraints>
@@ -141,13 +141,28 @@ Reference Application</string>
                                     <constraint firstItem="XyP-T6-Grw" firstAttribute="top" secondItem="nif-2j-axe" secondAttribute="bottom" constant="3" id="xfo-R9-2HD"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uD-43-QUx">
+                                <rect key="frame" x="209" y="30" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="Gda-Rq-eA4"/>
+                                    <constraint firstAttribute="width" constant="150" id="Slg-Lj-Try"/>
+                                    <constraint firstAttribute="height" constant="30" id="c48-KB-EoA"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="k69-r6-Kyr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="How to use?">
+                                    <color key="titleColor" red="0.86666666670000003" green="0.13725490200000001" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="1uD-43-QUx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="15J-6J-APf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="onv-Fk-qH6" secondAttribute="trailing" constant="65" id="99I-cq-9Rx"/>
                             <constraint firstItem="onv-Fk-qH6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="Cpd-vI-R0y"/>
                             <constraint firstItem="mC9-xx-mvZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="Iz5-Ik-1Bh"/>
                             <constraint firstItem="mC9-xx-mvZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RDr-Mh-icn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1uD-43-QUx" secondAttribute="trailing" constant="16" id="ZGI-CT-QVD"/>
                             <constraint firstItem="onv-Fk-qH6" firstAttribute="top" secondItem="mC9-xx-mvZ" secondAttribute="bottom" constant="-30" id="sxm-cK-7Pc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -155,6 +170,7 @@ Reference Application</string>
                     <connections>
                         <outlet property="actionContainer" destination="onv-Fk-qH6" id="itl-M0-ArT"/>
                         <outlet property="connectButton" destination="mfx-UW-O5d" id="XWQ-uA-ybX"/>
+                        <outlet property="helpButton" destination="1uD-43-QUx" id="Ou8-4N-ICt"/>
                         <outlet property="loadingView" destination="RPj-rL-vvK" id="0I6-ZI-h0J"/>
                         <outlet property="logo" destination="mC9-xx-mvZ" id="kqt-kG-7Ai"/>
                         <outlet property="logoTopAnchor" destination="Iz5-Ik-1Bh" id="i4L-78-YFg"/>
@@ -205,7 +221,7 @@ Reference Application</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status: Connecting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzX-tC-MyX">
-                                <rect key="frame" x="16" y="28" width="251" height="21"/>
+                                <rect key="frame" x="16" y="28.5" width="251" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="aXY-g3-EfH"/>
                                 </constraints>
@@ -214,7 +230,7 @@ Reference Application</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zeu-rB-xc7">
-                                <rect key="frame" x="154" y="581" width="66" height="66"/>
+                                <rect key="frame" x="154.5" y="581" width="66" height="66"/>
                                 <color key="backgroundColor" red="0.87058823529411766" green="0.31764705882352939" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="NTM-Mf-nhf"/>
