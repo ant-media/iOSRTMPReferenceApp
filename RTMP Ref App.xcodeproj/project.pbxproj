@@ -175,6 +175,7 @@
 				789A728A20F2596A00F07060 /* Frameworks */,
 				789A728B20F2596A00F07060 /* Resources */,
 				59E12638399AA14404150CA6 /* [CP] Embed Pods Frameworks */,
+				A76AB6EB6710E9D38B43DB07 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +251,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RTMP Ref App/Pods-RTMP Ref App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A76AB6EB6710E9D38B43DB07 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RTMP Ref App/Pods-RTMP Ref App-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D0542234B0D3AED51038BF69 /* [CP] Check Pods Manifest.lock */ = {
@@ -436,10 +452,7 @@
 				DEVELOPMENT_TEAM = MJU7KX4L7S;
 				INFOPLIST_FILE = "RTMP Ref App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.antmedia.rtmp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -456,10 +469,7 @@
 				DEVELOPMENT_TEAM = MJU7KX4L7S;
 				INFOPLIST_FILE = "RTMP Ref App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.antmedia.rtmp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
